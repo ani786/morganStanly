@@ -18,8 +18,7 @@ public class Main {
 
         String fileName;
         try {
-
-            LOGGER.log(Level.INFO, "Enter input file name in valid format[case Sensitive] with _ as separator , Test_<portfoliocode>_<ddmmyyyy>_<2digit-sequencenumber> portfoliocode is A or B or C");
+            LOGGER.log(Level.INFO, "Enter input file name in valid format[case Sensitive] with _ as separator and 4 parts, Test_<portfoliocode>_<ddmmyyyy>_<2digit-sequencenumber> where portfoliocode is A or B or C");
 
             Scanner scr = new Scanner(System.in);
             String filePathStr = scr.nextLine();
@@ -29,20 +28,16 @@ public class Main {
             // call getFileName() and get FileName path object
             Path fileNamePath = filePath.getFileName();
             fileName = fileNamePath.toString();
-            LOGGER.log(Level.INFO, "you have supplied the input path {0} and file {1} to Validate the file name", new String[]{filePathStr, fileName});
+            LOGGER.log(Level.INFO, "you have supplied the input File path {0} . And to Validate file name {1} ", new String[]{filePathStr, fileName});
 
 
             FileNameValidator fileNameValidator = FileNameValidator.class.getDeclaredConstructor().newInstance();
-
-
             if (fileNameValidator.validateFileName(fileName)) {
                 LOGGER.log(Level.INFO, "the input file name is valid :{0} ", fileName);
             }
-        } catch (FileNameNotValidException | ParseException | ArrayIndexOutOfBoundsException fileNameNotValidException) {
+        } catch (FileNameNotValidException | ArrayIndexOutOfBoundsException fileNameNotValidException) {
 
             LOGGER.log(Level.SEVERE, "File Name is not in valid format ", fileNameNotValidException);
-
-
         }
 
     }

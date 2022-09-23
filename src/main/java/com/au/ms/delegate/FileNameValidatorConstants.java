@@ -3,10 +3,11 @@ package com.au.ms.delegate;
 public enum FileNameValidatorConstants {
  ;
  public static  final String TEST = "Test";
- public static  final String FILE_PARTS_NOT_4 = "File Parts not 4 ";
+ public static  final String UNDERSCORE = "_";
+ public static  final String INVALID_FILE_FORMAT = "invalid file format %s, has to be Test_<portfoliocode>_<ddmmyyyy>_<2digit-sequencenumber>";
  public static  final String DD_MM_YYYY = "ddMMyyyy";
- public static  final String INVALID_FILE_NAME_PART_1 = "invalid file name first part  %s, has to be  Test – hardcoded string prefix ";
- public static  final String INVALID_FILE_NAME_PART_2 = "invalid file name second part  %s, has to be <portfoliocode> - can only be A,B,C ";
- public static  final String INVALID_FILE_NAME_PART_3 = "invalid file name third part  %s, has to be <ddmmyyyy>– is valuation date format dd e.g 07, mm e.g 12, yyyy e.g 1987. ";
- public static  final String INVALID_FILE_NAME_PART_4 = "invalid file name fourth part  %s, <2digit-sequencenumber> - is 2 digit sequence number ";
+ public static  final String INVALID_FILE_NAME_PREFIX = "invalid prefix  %s, has to be Test ";
+ public static  final String INVALID_FILE_NAME_PORTFOLIO_CODE = "invalid portfolio code  %s, <portfolioCode> has to be A or B or C ";
+ public static  final String INVALID_FILE_NAME_DATE_FORMAT = "invalid date format  %s, has to be <ddmmyyyy>– date format dd e.g 07, mm e.g 12, yyyy e.g 1987. ";
+ public static  final String INVALID_FILE_NAME_2_DIGIT_SEQ = "invalid 2 digit Sequence  %s, has to be <2digit-sequencenumber> - is 2 digit sequence number ";
 }
