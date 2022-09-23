@@ -4,6 +4,7 @@ Enter input file name in valid format[case Sensitive] with _ as separator, Test_
    
 You can have an actual file on a path on your machine or just the name of the file has to be supplied on the commandline as;
 
+jar file has been committed you can use that directly or can compile in your local using build deploy image shown below
 ===============================================================================================
 
 C:\Users\anigh\.m2\repository\com\au\morganStanly\1.0-SNAPSHOT>java -jar morganStanly-1.0-SNAPSHOT.jar
