@@ -6,6 +6,4 @@ public class FileNameNotValidException extends Exception {
         super(errorMessage);
     }
 
-
-
 }
