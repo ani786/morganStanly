@@ -3,6 +3,7 @@ package com.au.ms.delegate;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Arrays;
 import java.util.List;
 
 import static com.au.ms.delegate.FileNameValidatorConstants.*;
@@ -51,7 +52,8 @@ public class FileNameValidator {
     }
 
 
-    private boolean validate2DigitSequenceNumber(final String twoDigitSequenceNumber) throws FileNameNotValidException {
+    private boolean validate2DigitSequenceNumber(String twoDigitSequenceNumber) throws FileNameNotValidException {
+        twoDigitSequenceNumber= twoDigitSequenceNumber.contains(".")? Arrays.asList(twoDigitSequenceNumber.split("\\.")).get(0):twoDigitSequenceNumber;
         if (twoDigitSequenceNumber.matches("\\d{2}")) {
             return true;
         }

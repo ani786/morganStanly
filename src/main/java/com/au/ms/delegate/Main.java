@@ -28,16 +28,16 @@ public class Main {
             // call getFileName() and get FileName path object
             Path fileNamePath = filePath.getFileName();
             fileName = fileNamePath.toString();
-            LOGGER.log(Level.INFO, "you have supplied the input File path {0} . And to Validate file name {1} ", new String[]{filePathStr, fileName});
+            LOGGER.log(Level.INFO, "the input File path {0} . And file name {1} to Validate", new String[]{filePathStr, fileName});
 
 
             FileNameValidator fileNameValidator = FileNameValidator.class.getDeclaredConstructor().newInstance();
             if (fileNameValidator.validateFileName(fileName)) {
-                LOGGER.log(Level.INFO, "the input file name is valid :{0} ", fileName);
+                LOGGER.log(Level.INFO, "\n\nthe  file name {0} is valid", fileName);
             }
         } catch (FileNameNotValidException | ArrayIndexOutOfBoundsException fileNameNotValidException) {
 
-            LOGGER.log(Level.SEVERE, "File Name is not in valid format ", fileNameNotValidException);
+            LOGGER.log(Level.SEVERE, "\n\nFile Name is not in valid format ", fileNameNotValidException);
         }
 
     }

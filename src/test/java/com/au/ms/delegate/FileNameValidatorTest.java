@@ -22,9 +22,9 @@ public class FileNameValidatorTest {
     }
 
     @Test
-    public void testValidateFileName_FAIL() throws Exception {
+    public void testValidateFileName_FAIL() {
         FileNameValidator fileNameValidator = new FileNameValidator();
-       String invalidFileName="Test_D_19092082";
+        String invalidFileName = "Test_D_19092082";
         FileNameNotValidException thrown = assertThrows(
                 FileNameNotValidException.class,
                 () -> fileNameValidator.validateFileName(invalidFileName),
@@ -32,7 +32,6 @@ public class FileNameValidatorTest {
         );
         Assert.assertTrue(thrown.getMessage().contains("invalid file format"));
     }
-
 
 
     @Test
@@ -86,7 +85,7 @@ public class FileNameValidatorTest {
     }
 
     @Test
-    public void test_validateDateFormat_FAIL() throws Exception {
+    public void test_validateDateFormat_FAIL() {
         FileNameValidator fileNameValidator = new FileNameValidator();
         String inValidDateFormat = "13992082";
         FileNameNotValidException thrown = assertThrows(
